@@ -1,16 +1,16 @@
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk # for GUI
 from fuzzywuzzy import process 
 
 win= Tk()
 
 win.geometry("1000x250")
 
-strOptions = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday",]
+strOptions = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday",] #our database (for example days of the week) you can change it
 weeks=("\nSaturday - Sunday - Monday - Tuesday - Wednesday - Thursday - Friday\n")
-week = Label(win,text=weeks, font=("Helvetica 15 bold"))
-week.pack()
-def display_text():
+week = Label(win,text=weeks, font=("Helvetica 15 bold")) 
+week.pack()#for show data in program
+def display_text(): 
     global entry
     value= entry.get()
     Ratios = process.extract(value,strOptions)
